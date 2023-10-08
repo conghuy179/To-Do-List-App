@@ -8,7 +8,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #6c2e79, #9f43c7, #aa7fb6);
+    background: linear-gradient(135deg, #3422dd, #582897, #6f4779);
     padding: 10px;
 }
 
@@ -17,7 +17,7 @@
     max-width: 540px;
     background: rgb(255, 255, 255);
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 30px 30px;
     border-radius: 10px;
 }
 
@@ -29,15 +29,29 @@
 }
 
 .todo-app h2 img {
-    width: 30px;
-    margin-left: 10px;
+    width: 35px;
+    margin-left: 8px;
+}
+
+.todo-app h3 {
+    color: rgb(75, 74, 74);
+    display: flex;
+    align-items: right;
+    margin-top: 20px;
+}
+
+.todo-app h3 a {
+    color: rgb(75, 74, 74);
+    display: flex;
+    align-items: right;
+    margin-left: 5px;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #eccbf3;
+    background: #e9bcf1;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -55,7 +69,7 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: rgb(209, 99, 25);
+    background: rgb(89, 80, 218);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
