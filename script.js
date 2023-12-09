@@ -11,9 +11,9 @@ function addTask() {
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
 
-        //Add "X" button for each task created
+        //Add "3 dots" button for each task created
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
+        span.innerHTML = "\u2026";
         li.appendChild(span);
     }
     //Reset text in input box
@@ -23,7 +23,7 @@ function addTask() {
 
 //Function when click on a task
 // if user clicks on li => toggle checked and unchecked
-// if user clicks on span ("X" button inside li) => the parent (task) will be removed
+// if user clicks on span ("three dots" button inside li) => the parent (task) will be removed
 listContainer.addEventListener("click", function(e) {
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
@@ -43,3 +43,10 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+//To do: Add button: 3 points - Enable:
+// 1. Edit tasks' name and their categories
+// 2. Edit urgent's level: High/Medium/Low (red/yellow/green) 
+// 3. Edit deadline: Open the calendar table for them to pick (If time to finish tasks is more than 1 week, automatically 
+// change urgent's level to green, from 1 week to 3 days -> yellow, 3 days to 1 hour -> red)
+// 
