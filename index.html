@@ -8,32 +8,36 @@
 </head>
 
 <body>
-    <!-- Category side-bar
-    - Show all categories from the user's List
-    - Appear plus button to add from the side:
-        + Press that button -> appear rectangle space to add name of that category.  
-        + New category will appear below the List.
-        + Each category will have triple button on the right side, press it to open the edit task's bar on the right screen.   -->
+    <!--Category container:
+    - Input box for customers to type in-->
+
     <div class="category-container">
         <div class="category-input">
-            <h2>Add Your Category First                  
+            <h2>Add Your Category First
                 <img src="images/icons8-book-64.png">
             </h2>
             <div class="row">
                 <input type="text" id="input-box" placeholder="Create your Category HERE">
                 <button onclick="addCategory()">Add</button>
-            <!-- The category added will show its name BIG on top of the screen, as well as appearing on the left panel, along with
+                <!-- The category added will show its name BIG on top of the screen, as well as appearing on the left panel, along with
             number of tasks in that category: Default 0 REF: microsoft to do app -->
             </div>
         </div>
     </div>
 
+    <!-- Category side-bar
+    - Show all categories from the user's List
+    - Appear plus button to add from the side:
+        + Press that button -> appear rectangle space to add name of that category.
+        + New category will appear below the List.
+        + Each category will have triple button on the right side, press it to open the edit task's bar on the right screen.   -->
+
     <div class="side-bar">
-        <ul id="list-category">
+        <!-- <ul id="list-category">
             <li class="category">Category 1</li>
             <li>Category 2</li>
             <li>Category 3</li>
-        </ul>
+        </ul> -->
     </div>
 
     <div class="container">
