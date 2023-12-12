@@ -5,6 +5,33 @@
     box-sizing: border-box;
 }
 
+.category-container {
+    width: 100%;
+    max-width: 540px;
+    background: linear-gradient(135deg, #3422dd, #582897, #6f4779);
+    margin: 100px auto 20px;
+    padding: 40px 30px 30px;
+    border-radius: 10px;
+}
+
+.category-container h2 {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0px 0.3px 0.9px var(--bg-shadow), 0px 1.6px 3.6px var(--bg-shadow);
+}
+
+
 .container {
     width: 100%;
     min-height: 100vh;
