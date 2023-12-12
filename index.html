@@ -8,18 +8,29 @@
 </head>
 
 <body>
+    <div class="category-container">
+        <div class="category-input">
+            <input type="text" id="input-box" placeholder="Create your Category HERE">
+            <button onclick="addCategory()">Add</button>
+                                <!-- The category added will show its name BIG on top of the screen, as well as appearing on the left panel, along with
+                    number of tasks in that category: Default 0 
+                REF: microsoft to do app -->
+        </div>
+    </div>
+    <div class="side-bar">
+        <ul id="list-category">
+            <li class="category">Category 1</li>
+            <li>Category 2</li>
+            <li>Category 3</li>
+        </ul>
+    </div>
     <div class="container">
         <div class="todo-app">
             <h2>To-Do List
                 <img src="images/icons8-book-64.png"></h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="Create your Category HERE">
+                <input type="text" id="input-box" placeholder="Add your task HERE">
                 <button onclick="addTask()">Add</button>
-                <!-- The category added will show its name BIG on top of the screen, as well as appearing on the left panel, along with
-                    number of tasks in that category: Default 0 
-                REF: microsoft to do app -->
-                <!-- <input type="text" id="input-box" placeholder="Add your task HERE">
-                <button onclick="addTask()">Add</button> -->
             </div>
             <ul id="list-container">
                 <li class="checked">Task 1</li>
