@@ -9,15 +9,15 @@
 
 <body>
     <!--Category container:
-    - Input box for customers to type in-->
-
+    - Input box for customers to type in
+    - After press "add" or "enter", the task will -->
     <div class="category-container">
         <div class="category-input">
             <h2>Add Your Category First
                 <img src="images/icons8-book-64.png">
             </h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="Create your Category HERE">
+                <input type="text" id="input-box-cate" placeholder="Create your Category HERE">
                 <button onclick="addCategory()">Add</button>
                 <!-- The category added will show its name BIG on top of the screen, as well as appearing on the left panel, along with
             number of tasks in that category: Default 0 REF: microsoft to do app -->
@@ -33,14 +33,14 @@
         + Each category will have triple button on the right side, press it to open the edit task's bar on the right screen.   -->
 
     <div class="side-bar">
-        <!-- <ul id="list-category">
-            <li class="category">Category 1</li>
+        <ul id="category-container">
+            <!-- <li class="category">Category 1</li>
             <li>Category 2</li>
-            <li>Category 3</li>
-        </ul> -->
+            <li>Category 3</li> -->
+        </ul>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="todo-app">
             <h2>To-Do List
                 <img src="images/contract.png"></h2>
@@ -57,7 +57,7 @@
             <h3>Created by:
                 <a href="https://www.linkedin.com/in/cong-huy-phan-1b39641a0/"> Phan Cong Huy </h3>
         </div>
-    </div>
+    </div> -->
     <script src="script.js"></script>
 </body>
 

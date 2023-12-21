@@ -1,8 +1,39 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
-//Function to add new task
+const inputBoxCate = document.getElementById("input-box-cate");
+const categoryContainer = document.getElementById("category-container");
+
+//Function to add new category
 function addCategory() {
+    if (inputBoxCate.value === '') {
+        alert("You must write something before adding!");
+    } else {
+        //Create new task
+        let li = document.createElement("li");
+        li.innerHTML = inputBoxCate.value;
+        categoryContainer.appendChild(li);
+
+        //Add "3 dots" button for each task created
+        let span = document.createElement("span");
+        span.innerHTML = "\u2026";
+        li.appendChild(span);
+    }
+    //Reset text in input box
+    inputBox.value = "";
+    saveData();
+}
+
+//Function to appear addTask function when there is
+//at least 1 category
+function findCategory(){
+    if (categoryContainer.childNodes.length > 0) {
+        
+    } 
+}
+
+//Function to add new task
+function addTask() {
     if (inputBox.value === '') {
         alert("You must write something before adding!");
     } else {
@@ -20,6 +51,8 @@ function addCategory() {
     inputBox.value = "";
     saveData();
 }
+
+
 
 //Function when click on a task
 // if user clicks on li => toggle checked and unchecked
