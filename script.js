@@ -26,11 +26,33 @@ function addCategory() {
 
 //Function to appear addTask function when there is
 //at least 1 category
-function findCategory(){
-    if (categoryContainer.childNodes.length > 0) {
-        
-    } 
-}
+//The task will automatically added to the category just created
+
+// Function to show/hide addTask function based on category availability
+function manageTaskInput() {
+    const categoryCount = categoryContainer.childElementCount;
+    const addTaskButton = document.querySelector(".todo-app button"); 
+    // Target the button within .todo-app
+    const taskInputContainer = document.querySelector(".todo-app .row"); 
+    // Target the input row within .todo-app
+  
+    if (categoryCount > 0) {
+      addTaskButton.style.display = "block";
+      taskInputContainer.style.display = "block";
+  
+      if (categoryCount === 1) {
+        addTask(); // Call addTask directly when a task is added
+      }
+    } else {
+      addTaskButton.style.display = "none";
+      taskInputContainer.style.display = "none";
+    }
+  }
+  
+  // Call manageTaskInput initially and when categories change
+  manageTaskInput();
+  categoryContainer.addEventListener("DOMNodeInserted", manageTaskInput);
+  categoryContainer.addEventListener("DOMNodeRemoved", manageTaskInput);
 
 //Function to add new task
 function addTask() {
