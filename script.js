@@ -20,8 +20,9 @@ function addCategory() {
         li.appendChild(span);
     }
     //Reset text in input box
-    inputBox.value = "";
+    inputBoxCate.value = "";
     saveData();
+
 }
 
 //Function to appear addTask function when there is
@@ -31,21 +32,18 @@ function addCategory() {
 // Function to show/hide addTask function based on category availability
 function manageTaskInput() {
     const categoryCount = categoryContainer.childElementCount;
-    const addTaskButton = document.querySelector(".todo-app button"); 
-    // Target the button within .todo-app
-    const taskInputContainer = document.querySelector(".todo-app .row"); 
-    // Target the input row within .todo-app
+    const addTaskButton = document.querySelector(".todo-app"); 
+    // Target the whole todo-app within .container
   
     if (categoryCount > 0) {
       addTaskButton.style.display = "block";
-      taskInputContainer.style.display = "block";
   
       if (categoryCount === 1) {
         addTask(); // Call addTask directly when a task is added
+
       }
     } else {
       addTaskButton.style.display = "none";
-      taskInputContainer.style.display = "none";
     }
   }
   
