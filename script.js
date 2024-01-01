@@ -40,17 +40,16 @@ function manageTaskInput() {
   
       if (categoryCount === 1) {
         addTask(); // Call addTask directly when a task is added
-
       }
     } else {
       addTaskButton.style.display = "none";
     }
   }
-  
-  // Call manageTaskInput initially and when categories change
-  manageTaskInput();
-  categoryContainer.addEventListener("DOMNodeInserted", manageTaskInput);
-  categoryContainer.addEventListener("DOMNodeRemoved", manageTaskInput);
+
+   // Call manageTaskInput initially and when categories change
+ manageTaskInput();
+ categoryContainer.addEventListener("DOMNodeInserted", manageTaskInput);
+ categoryContainer.addEventListener("DOMNodeRemoved", manageTaskInput);
 
 //Function to add new task
 function addTask() {
@@ -71,8 +70,6 @@ function addTask() {
     inputBox.value = "";
     saveData();
 }
-
-
 
 //Function when click on a task
 // if user clicks on li => toggle checked and unchecked
@@ -95,7 +92,8 @@ function saveData() {
 function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
-showTask();
+ showTask();
+
 
 //To do: Add button: 3 points - Enable:
 // 1. Edit tasks' name and their categories
