@@ -22,12 +22,31 @@ function addCategory() {
     //Reset text in input box
     inputBoxCate.value = "";
     saveData();
-
 }
 
-//Function to appear addTask function when there is
-//at least 1 category
-//The task will automatically added to the category just created
+
+
+// Function when click on a category on sidebar:
+// Show "add task" menu
+// On "add task menu" show: "To-do List in 'categoryName' Category".
+
+const changeText = document.querySelector("#category-text-change");
+changeText.addEventListener("click", fucntion()) {
+    changeText.textContent = ""
+}
+
+// if user clicks on li => toggle screen with all tasks from that category
+// if user clicks on span ("three dots" button inside li) 
+//=> open edit menu 
+categoryContainer.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+        saveData();
+    } else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
 
 // Function to show/hide addTask function based on category availability
 function manageTaskInput() {
@@ -37,14 +56,14 @@ function manageTaskInput() {
   
     if (categoryCount > 0) {
       addTaskButton.style.display = "block";
-  
-      if (categoryCount === 1) {
+    } else if (categoryCount === 1) {
         addTask(); // Call addTask directly when a task is added
-      }
     } else {
       addTaskButton.style.display = "none";
     }
   }
+
+//TODO: 
 
    // Call manageTaskInput initially and when categories change
  manageTaskInput();
